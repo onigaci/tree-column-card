@@ -1,0 +1,42 @@
+@use 'config';
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 1em auto;
+
+    &__card{
+        padding:2em;
+    }
+    .sedan{
+        background: config.$bright-orange;
+    }
+    .suvs{
+        background: config.$dark-cyan;
+    }
+    .luxury{
+        background: config.$very-dark-cyan;
+    }
+    img{
+        margin-bottom: .5em;
+    }
+    .title{
+        font-family: config.$font-family-1;
+        font-size: 2rem;
+        margin-bottom: 1em;
+        color: config.$very-light-gray;
+        text-transform: uppercase;
+    }
+    p{
+        font-family: config.$font-family-2;
+        color: config.$transparent-white;
+        margin-bottom: 2em;
+    }
+    .btn{
+        @include config.reset-link;
+        background: config.$very-light-gray;
+    }
+    .btn--1{color: config.$bright-orange;}
+    .btn--2{color:config.$dark-cyan;}
+    .btn--3{color: config.$very-dark-cyan;}
+}
