@@ -1,0 +1,14 @@
+@use 'config';
+//reset links
+@mixin reset-link{
+    display:inline-block;
+    text-decoration: none;
+    padding:.5em 1em;
+    border-radius: 3em;
+    font-family: config.$font-family-2;
+    transition: box-shadow .2s;
+}
+
+@mixin btn-hover{
+    box-shadow: .1em .1em .1em rgba(0, 0, 0, 0.336);
+}

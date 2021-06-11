@@ -34,7 +34,7 @@
   color: #f2f2f2;
   text-transform: uppercase;
 }
-.container p {
+.container .main-text {
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 2em;
@@ -45,7 +45,11 @@
   padding: 0.5em 1em;
   border-radius: 3em;
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+  transition: box-shadow 0.2s;
   background: #f2f2f2;
+}
+.container .btn:hover {
+  box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.336);
 }
 .container .btn--1 {
   color: #e38826;
@@ -55,6 +59,21 @@
 }
 .container .btn--3 {
   color: #004241;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    width: 80%;
+  }
+  .container .main-text {
+    margin-bottom: 5em;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -19,12 +19,15 @@ $very-light-gray: rgb(242, 242, 242);//background, headings, buttons
 $font-family-1: 'Big Shoulders Display',Arial, Helvetica, sans-serif;
 $font-family-2: 'Lexend Deca',Arial, Helvetica, sans-serif;
 
-//reset links
-@mixin reset-link{
-    display:inline-block;
-    text-decoration: none;
-    padding:.5em 1em;
-    border-radius: 3em;
-    font-family: $font-family-2;
+//mixins responsive
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
 }
     

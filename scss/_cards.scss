@@ -1,4 +1,5 @@
 @use 'config';
+@use 'buttons';
 .container{
     display:flex;
     flex-direction: column;
@@ -27,14 +28,18 @@
         color: config.$very-light-gray;
         text-transform: uppercase;
     }
-    p{
+    .main-text{
         font-family: config.$font-family-2;
         color: config.$transparent-white;
         margin-bottom: 2em;
     }
     .btn{
-        @include config.reset-link;
+        @include buttons.reset-link;
         background: config.$very-light-gray;
+
+        &:hover{
+            @include buttons.btn-hover;
+        }
     }
     .btn--1{color: config.$bright-orange;}
     .btn--2{color:config.$dark-cyan;}
